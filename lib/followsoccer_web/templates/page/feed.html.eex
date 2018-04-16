@@ -1,0 +1,9 @@
+<%= if @current_user do %>
+  <div class="row">
+    <div class="col">
+    Welcome  !!
+    </div>
+  </div>
+<% end %>
+<hr />
+</div>

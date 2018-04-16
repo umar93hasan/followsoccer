@@ -4,4 +4,7 @@ defmodule FollowsoccerWeb.PageController do
   def index(conn, _params) do
     render conn, "index.html"
   end
+  def feed(conn, _params) do
+    render conn, "feed.html"
+  end
 end
