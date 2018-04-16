@@ -1,9 +1,5 @@
 <%= if @current_user do %>
-  <div class="row">
-    <div class="col">
-    Welcome  !!
-    </div>
+  <div id="root">
+    <p>React app loading</p>
   </div>
 <% end %>
-<hr />
-</div>
