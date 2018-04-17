@@ -1,4 +1,8 @@
 <%= if @current_user do %>
+<script>
+  window.userEmail = "<%= @current_user.email %>";
+  console.log("email: "+window.userEmail);
+</script>
   <div class="row">
     <div class="col">
     Welcome  !!

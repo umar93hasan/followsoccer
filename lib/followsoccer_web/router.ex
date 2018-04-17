@@ -18,6 +18,8 @@ defmodule FollowsoccerWeb.Router do
     # TODO: Move this function out of the router module.
     user_id = get_session(conn, :user_id)
     user = Followsoccer.Accounts.get_user(user_id || -1)
+    IO.inspect "in get cur user"
+    IO.inspect user
     assign(conn, :current_user, user)
   end
 

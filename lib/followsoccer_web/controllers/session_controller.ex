@@ -8,7 +8,7 @@ defmodule FollowsoccerWeb.SessionController do
     #user = Accounts.get_user_by_email(email)
     user = get_and_auth_user(email, password)
 
-    if user do
+    if user do      
       conn
       |> put_session(:user_id, user.id)
       |> put_flash(:info, "Welcome #{user.name}")
