@@ -32,8 +32,8 @@ defmodule FollowsoccerWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api/v1", FollowsoccerWeb do
-  #   pipe_through :api
-  #   resources "/users", UserController, except: [:new, :edit]
-  # end
+  scope "/api/v1", FollowsoccerWeb do
+    pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
+  end
 end
