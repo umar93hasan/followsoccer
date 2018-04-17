@@ -3,11 +3,7 @@
   window.userEmail = "<%= @current_user.email %>";
   console.log("email: "+window.userEmail);
 </script>
-  <div class="row">
-    <div class="col">
-    Welcome  !!
-    </div>
+  <div id="root">
+    <p>React app loading</p>
   </div>
 <% end %>
-<hr />
-</div>
