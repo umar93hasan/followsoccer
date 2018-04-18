@@ -12,9 +12,6 @@ export default function Nav(props) {
         <NavItem>
           <NavLink to="/" exact={true} activeClassName="active" className="nav-link">Feed</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink to="/" exact={true} className="nav-link">All Teams</NavLink>
-        </NavItem>
       </ul>
     </nav>
   );

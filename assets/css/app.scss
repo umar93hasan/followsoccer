@@ -2,27 +2,70 @@
 @import "bootstrap";
 
 .feed-col {
-  margin-top: 1ex;
+  margin-top: 2ex;
 }
 
-.card-header {
-  /*background-color: #343a40;*/
+/*-----your teams-----*/
+
+.your-teams-card {
+  width: 100%;
 }
 
 .your-team-row {
-  margin-bottom: 2ex;
+  padding: 2ex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .left-button {
   margin-right: 1ex;
 }
 
-/*follow form*/
+/*-----follow form-----*/
+
+.follow-form-card {
+  width: 100%;
+  margin-bottom: 2ex;
+}
 
 .follow-form-row {
-  margin-bottom: 2ex;
 }
 
 .follow-form-label {
   margin-bottom: 1ex;
+}
+
+/*-----schedule-----*/
+
+.schedule-card {
+  width: 100%;
+}
+
+.match-col {
+  text-align: center;
+}
+
+.match-row {
+  margin-bottom: 2ex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.match-container {
+  margin-bottom: 2ex;
+}
+
+.match-info-row {
+  margin-bottom: 2ex;
+}
+
+.placeholder {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: table;
+  margin: 0 auto;
+}
+
+.match-team-name {
+  margin: 0 auto;
 }
