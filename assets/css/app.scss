@@ -1,6 +1,12 @@
 /* This file is for your main application css. */
 @import "bootstrap";
 
+.follow-button {
+  margin-left: 1ex;
+}
+
+/*-----feed-----*/
+
 .feed-col {
   margin-top: 2ex;
 }
@@ -11,27 +17,27 @@
   width: 100%;
 }
 
+.your-teams-card-body {
+  padding: 0;
+}
+
 .your-team-row {
   padding: 2ex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.left-button {
-  margin-right: 1ex;
+.your-teams-header {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 /*-----follow form-----*/
 
 .follow-form-card {
   width: 100%;
-  margin-bottom: 2ex;
 }
 
 .follow-form-row {
-}
-
-.follow-form-label {
-  margin-bottom: 1ex;
+  margin-bottom: 2ex;
 }
 
 /*-----schedule-----*/
@@ -66,6 +72,35 @@
   margin: 0 auto;
 }
 
-.match-team-name {
-  margin: 0 auto;
+.team-image-row {
+  margin-bottom: 1ex;
+}
+
+.match-team-name-row {
+  justify-content: center;
+}
+
+/*-----team page-----*/
+
+.team-page-header-row {
+  margin-top: 2ex;
+}
+
+.team-page-col {
+}
+
+.team-page-row {
+  margin-top: 2ex;
+}
+
+.standings-card, .chat-card {
+  width: 100%;
+}
+
+.chat-card {
+  height: 100%;
+}
+
+.standings-row {
+  margin-bottom: 2ex;
 }

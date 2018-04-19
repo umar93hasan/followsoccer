@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardHeader, CardBody, CardTexti, Table, Button} from 'reactstrap';
+import { ListGroup, ListGroupItem, Container, Row, Col, Card, CardHeader, CardBody, CardTexti, Table, Button} from 'reactstrap';
 
 import YourTeam from './your-team';
 import FollowForm from './follow-form';
@@ -47,35 +47,31 @@ export default function Feed(props) {
   //let yourMatches = _.map(params.yourMatches, (mm) => <Match key={mm.ide} match={mm} />);
 
   return (
-    <Container className="feed-container">
-      <Row className="feed-row">
-        <Col className="feed-col teams-col">
+    <Container>
+      <Row>
+        <Col className="feed-col">
           <Row className="follow-form-row">
             <Card className="follow-form-card">
-              <CardHeader classname="card-header">Follow a team</CardHeader>
+              <CardHeader>Follow a team</CardHeader>
               <CardBody>
-                <Container className="follow-form-container">
+                <Container>
                   <FollowForm teams={teamList} leagues={leagueList} />
                 </Container>
               </CardBody>
             </Card>
           </Row>
-          <Row className="your-teams-row">
-            <Card className="your-teams-card">
-              <CardHeader className="card-header">Your Teams</CardHeader>
-              <CardBody>
-                <Container className="your-teams-container">
-                  { yourTeams }
-                </Container>
-              </CardBody>
-            </Card>
+          <Row>
+            <ListGroup className="your-teams-card">
+              <ListGroupItem className="your-teams-header card-header">Your Teams</ListGroupItem>
+              { yourTeams }
+            </ListGroup>
           </Row>
         </Col>
-        <Col className="feed-col schedule-col">
+        <Col className="feed-col">
           <Card className="schedule-card">
-            <CardHeader className="card-header">Schedule</CardHeader>
+            <CardHeader>Schedule</CardHeader>
             <CardBody>
-              <Container className="schedule-container">
+              <Container>
                 { yourMatches }
               </Container>
             </CardBody>

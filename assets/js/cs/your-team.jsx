@@ -1,12 +1,15 @@
 import React from 'react';
-import { Row, Col, Button } from 'reactstrap';
+import { ListGroupItem, Row, Col, Button } from 'reactstrap';
 
 export default function YourTeam(params) {
   let team = params.team;
-  return <Row className="your-team-row">
-    <Col className="your-teams-col-left">{team.name}</Col>
-    <Col className="your-teams-col-right">
-      <Button className="left-button sub-unsub-button" color="secondary" size="sm">Subscribe</Button><Button className="unfollow-button" color="secondary" size="sm">Unfollow</Button>
-    </Col>
-  </Row>;
+  return <ListGroupItem className="your-team-row" tag="a" href="#">
+    <Row>
+      <Col className="your-teams-col-left">{team.name}</Col>
+      <Col className="your-teams-col-right">
+        <Button className="float-right follow-button" color="secondary" size="sm">Unfollow</Button>
+        <Button className="float-right subscribe-button" color="secondary" size="sm">Subscribe</Button>
+      </Col>
+    </Row>
+  </ListGroupItem>;
 }

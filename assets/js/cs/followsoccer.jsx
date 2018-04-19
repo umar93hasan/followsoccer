@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Nav from './nav';
 import Feed from './feed';
+import TeamPage from './team-page';
 
 export default function followsoccer_init() {
   let root = document.getElementById('root');

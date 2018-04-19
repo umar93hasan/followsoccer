@@ -12,24 +12,22 @@ export default function Match(params) {
         <Row className="match-info-row">
           {league} &middot; {date}, {time}
         </Row>
-        <Row className="match-teams-row">
-          <Col className="match-col match-col-left">
-            <Container>
-              <Row>
-                <span className="placeholder"></span>
-              </Row>
-              <Row className="match-team-name">
-                {homeTeam}
-              </Row>
-            </Container>
+        <Row>
+          <Col>
+            <Row className="team-image-row">
+              <span className="placeholder"></span>
+            </Row>
+            <Row className="match-team-name-row">
+              {homeTeam}
+            </Row>
           </Col>
-          <Col className="match-col match-col-middle">vs</Col>
-          <Col className="match-col match-col-right">
+          <Col className="match-col">vs</Col>
+          <Col className="match-col">
             <Container>
-              <Row>
+              <Row className="team-image-row">
                 <span className="placeholder"></span>
               </Row>
-              <Row className="match-team-name">
+              <Row className="match-team-name-row">
                 {awayTeam}
               </Row>
             </Container>
