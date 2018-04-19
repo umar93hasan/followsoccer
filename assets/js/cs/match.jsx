@@ -12,7 +12,7 @@ export default function Match(params) {
   return <Row className="match-row">
       <Container className="match-container">
         <Row className="match-info-row">
-          {league} &middot; {date}, {time}
+          <font className="muted-font">{league} &middot; {date}, {time}</font>
         </Row>
         <Row>
           <Col>

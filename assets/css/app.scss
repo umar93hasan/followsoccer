@@ -9,46 +9,25 @@
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-/*-----feed-----*/
+.section-card {
+  width: 100%;
+}
 
-.feed-col {
-  margin-top: 2ex;
+.section-row, .navbar {
+  margin-bottom: 2ex;
+}
+
+.muted-font {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /*-----your teams-----*/
-
-.your-teams-card {
-  width: 100%;
-}
 
 .your-teams-card-body {
   padding: 0;
 }
 
-.your-team-row {
-  padding: 2ex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.your-teams-header {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
-/*-----follow form-----*/
-
-.follow-form-card {
-  width: 100%;
-}
-
-.follow-form-row {
-  margin-bottom: 2ex;
-}
-
 /*-----schedule-----*/
-
-.schedule-card {
-  width: 100%;
-}
 
 .match-col {
   text-align: center;
@@ -65,15 +44,6 @@
 
 .match-info-row {
   margin-bottom: 2ex;
-}
-
-.placeholder {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: table;
-  margin: 0 auto;
 }
 
 .crest {
@@ -93,29 +63,10 @@
 
 /*-----team page-----*/
 
-.team-page-header-row {
-  margin-top: 2ex;
-}
-
 .team-page-crest {
   width: 5ex;
 }
 
-.team-page-col {
-}
-
-.team-page-row {
-  margin-top: 2ex;
-}
-
-.standings-card, .chat-card {
-  width: 100%;
-}
-
 .chat-card {
   height: 100%;
-}
-
-.standings-row {
-  margin-bottom: 2ex;
 }

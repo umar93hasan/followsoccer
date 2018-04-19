@@ -4,7 +4,7 @@ import { ListGroupItem, Container, Row, Col, } from 'reactstrap';
 export default function Standing(params) {
   let standing = params.standing;
 
-  return <ListGroupItem className="standing-row" tag="a" href="/teampage/1">
+  return <ListGroupItem tag="a" href="/teampage/1">
     <Row>
       <Col sm="2">{standing.rank}</Col>
       <Col>{standing.team}</Col>
