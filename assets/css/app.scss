@@ -5,6 +5,10 @@
   margin-left: 1ex;
 }
 
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
 /*-----feed-----*/
 
 .feed-col {
@@ -72,6 +76,13 @@
   margin: 0 auto;
 }
 
+.crest {
+  height: 25px;
+  width: 25px;
+  display: table;
+  margin: 0 auto;
+}
+
 .team-image-row {
   margin-bottom: 1ex;
 }
@@ -84,6 +95,10 @@
 
 .team-page-header-row {
   margin-top: 2ex;
+}
+
+.team-page-crest {
+  width: 5ex;
 }
 
 .team-page-col {

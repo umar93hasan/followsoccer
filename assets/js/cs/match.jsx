@@ -7,6 +7,8 @@ export default function Match(params) {
   let league = params.match.league.name;
   let date = params.match.date;
   let time = params.match.time;
+  let homeCrestUrl = params.match.homeCrestUrl;
+  let awayCrestUrl = params.match.awayCrestUrl;
   return <Row className="match-row">
       <Container className="match-container">
         <Row className="match-info-row">
@@ -15,7 +17,7 @@ export default function Match(params) {
         <Row>
           <Col>
             <Row className="team-image-row">
-              <span className="placeholder"></span>
+              <img src={homeCrestUrl} className="crest" />
             </Row>
             <Row className="match-team-name-row">
               {homeTeam}
@@ -25,7 +27,7 @@ export default function Match(params) {
           <Col className="match-col">
             <Container>
               <Row className="team-image-row">
-                <span className="placeholder"></span>
+                <img src={awayCrestUrl} className="crest" />
               </Row>
               <Row className="match-team-name-row">
                 {awayTeam}

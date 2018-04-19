@@ -19,16 +19,20 @@ export default function Feed(props) {
   let leagueList = [epl, bund, league1, league2];
   //let leagueList = params.allLeagues;
 
-  let chelsea = { name: "Chelsea FC", id: 1 };
+  let gladBach = { name: "Monchengladbach", id: 1 };
   let loading = { name: "Loading...", id: 2 };
-  let yourTeamList = [chelsea, loading];
+  let yourTeamList = [gladBach, loading];
   let yourTeams = _.map(yourTeamList, (tt) => <YourTeam key={tt.id} team={tt} />);
   //let yourTeams = _.map(params.yourTeams, (tt) => <YourTeam key={tt.id} team={tt} />);
 
+  let homeCrestUrl = "http://upload.wikimedia.org/wikipedia/commons/8/81/Borussia_Mönchengladbach_logo.svg";
+  let awayCrestUrl = "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg";
 
   let match1 = {
-    home: chelsea,
+    home: gladBach,
+    homeCrestUrl: homeCrestUrl,
     away: team1,
+    awayCrestUrl: awayCrestUrl,
     league: epl,
     date: "Wed, 4/18",
     time: "2:45pm",
@@ -36,7 +40,9 @@ export default function Feed(props) {
   };
   let match2 = {
     home: team2,
+    homeCrestUrl: homeCrestUrl,
     away: team3,
+    awayCrestUrl: awayCrestUrl,
     league: bund,
     date: "Thu, 4/18",
     time: "2:45pm",

@@ -25,7 +25,12 @@ class Followsoccer extends React.Component {
       <Router>
         <div>
           <Nav />
-          <Feed />
+          <Route path="/feed" exact={true} render={() =>
+            <Feed />
+          } />
+          <Route path="/teampage/:team_id" exact={true} render={() =>
+            <TeamPage />
+          } />
         </div>
       </Router>
     );

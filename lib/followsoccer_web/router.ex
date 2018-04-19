@@ -29,6 +29,7 @@ defmodule FollowsoccerWeb.Router do
     delete "/session", SessionController, :delete
     resources "/users", UserController
     get "/feed", PageController, :feed
+    get "/teampage/:id", PageController, :feed
   end
 
   # Other scopes may use custom stacks.

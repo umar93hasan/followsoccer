@@ -3,7 +3,8 @@ import { ListGroupItem, Row, Col, Button } from 'reactstrap';
 
 export default function YourTeam(params) {
   let team = params.team;
-  return <ListGroupItem className="your-team-row" tag="a" href="#">
+  let id = 1;
+  return <ListGroupItem className="your-team-row" tag="a" href={"/teampage/" + id}>
     <Row>
       <Col className="your-teams-col-left">{team.name}</Col>
       <Col className="your-teams-col-right">
