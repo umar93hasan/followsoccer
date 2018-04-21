@@ -3,6 +3,7 @@ defmodule FollowsoccerWeb.UserSocket do
 
   ## Channels
   # channel "room:*", FollowsoccerWeb.RoomChannel
+  channel "soccerteams:*", FollowsoccerWeb.SoccerteamsChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

@@ -10,10 +10,7 @@ export default function Nav(props) {
       </span>
       <ul className="navbar-nav mr-auto">
         <NavItem>
-          <NavLink to="/" exact={true} activeClassName="active" className="nav-link">Feed</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/" exact={true} className="nav-link">All Teams</NavLink>
+          <NavLink to="/feed" exact={true} activeClassName="active" className="nav-link">Feed</NavLink>
         </NavItem>
       </ul>
     </nav>

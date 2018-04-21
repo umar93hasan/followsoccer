@@ -1,8 +1,26 @@
 <%= if @current_user do %>
 <script>
-  window.userEmail = "<%= @current_user.email %>";
-  console.log("email: "+window.userEmail);
+  var user = {};
+  user["name"] = "<%= @current_user.name %>";
+  user["email"] = "<%= @current_user.email %>";
+  user["id"] = "<%= @current_user.id %>"
+  window.user = user;
+  //console.log("email: "+window.user.id);
+  var listOfFollowedTeams = [];
+  <%= if Enum.count(@myTeams)!=0 do %>
+  <%= Enum.map @myTeams, fn team -> %>
+  var team = {};
+  team['tname'] = "<%= team.tname %>";
+  team['tcode'] = "<%= team.tcode %>";
+  team['subscribe'] = "<%= team.subscribe %>";
+  team['id'] = "<%= team.id %>"
+  listOfFollowedTeams.push(team);
+  <% end %>
+  <% end %>
+  //console.log(listOfFollowedTeams);
+  window.followedTeams = listOfFollowedTeams;
 </script>
+
   <div id="root">
     <p>React app loading</p>
   </div>

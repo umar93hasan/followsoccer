@@ -6,8 +6,8 @@ defmodule Followsoccer.Mailer do
 
     def send_welcome_text_email(email_address) do
       send_email to: email_address,
-                 from: "subscription@followsoccer.com",
+                 from: "FollowSoccer@fs.com",
                  subject: "Welcome!",
-                 text: "Welcome to FollowSoccer!"
+                 text: "Welcome to FollowSoccer! Follow your favourite soccer teams. Stay updated on the latest results. Chat with other fans! Have fun."
     end
 end

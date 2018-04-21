@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script>
+      window.userToken = "TODO";
+    </script>
     <title>Hello Followsoccer!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
@@ -21,7 +23,7 @@
               <%= link "Log Out", to: "/session", method: :delete %>
             </p>
           <% else %>
-            <p>Not logged in.</p>
+            <p>Not logged in.<a href="/">Go to login</a></p>
           <% end %>
         </div>
       </div>

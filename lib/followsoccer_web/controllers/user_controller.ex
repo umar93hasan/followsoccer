@@ -17,6 +17,7 @@ defmodule FollowsoccerWeb.UserController do
   def create(conn, %{"user" => user_params}) do
     case Accounts.create_user(user_params) do
       {:ok, user} ->
+        Followsoccer.Mailer.send_welcome_text_email(user_params["email"])
         conn
         |> put_flash(:info, "User created successfully.")
         |> redirect(to: user_path(conn, :show, user))

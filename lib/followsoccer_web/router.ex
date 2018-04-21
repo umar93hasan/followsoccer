@@ -31,11 +31,14 @@ defmodule FollowsoccerWeb.Router do
     delete "/session", SessionController, :delete
     resources "/users", UserController
     get "/feed", PageController, :feed
+    get "/soccerteams/:soccerteams", PageController, :feed
   end
 
   # Other scopes may use custom stacks.
   scope "/api/v1", FollowsoccerWeb do
     pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
+    resources "/leagues", LeagueController, except: [:new, :edit]
+    resources "/follows", FollowController, except: [:new, :edit]
   end
 end

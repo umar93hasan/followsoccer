@@ -18,7 +18,22 @@ import "phoenix_html";
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-// import socket from "./socket"
+ import socket from "./socket"
 
 import followsoccer_init from "./cs/followsoccer";
-$(followsoccer_init);
+function start(){
+  let root = document.getElementById('root');
+  if(root){
+    let channel = socket.channel("soccerteams:0", window.user.name);
+       channel.join()
+         .receive("ok", resp => {
+           //console.log("joinedSucc::"+resp);
+
+          })
+         .receive("error", resp => {
+           //console.log("Unable to join : ", resp)
+          });
+    followsoccer_init(channel,window.user,window.followedTeams);
+  }
+}
+$(start);

@@ -45,7 +45,8 @@ defmodule Followsoccer.Mixfile do
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
       {:mailgun, "~> 0.1.2"},
-      {:poison, "~> 2.1", override: true}
+      {:poison, "~> 2.1", override: true},
+      {:cors_plug, "~> 1.5"},
     ]
   end
 

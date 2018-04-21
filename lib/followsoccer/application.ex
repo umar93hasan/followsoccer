@@ -14,6 +14,7 @@ defmodule Followsoccer.Application do
       supervisor(FollowsoccerWeb.Endpoint, []),
       # Start your own worker by calling: Followsoccer.Worker.start_link(arg1, arg2, arg3)
       # worker(Followsoccer.Worker, [arg1, arg2, arg3]),
+      worker(Followsoccer.ChatBackup, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
