@@ -2,13 +2,14 @@ import React from 'react';
 import { ListGroup, ListGroupItem, Container, Row, Col, Card, CardHeader, CardBody, Table, Button } from 'reactstrap';
 import Match from './match';
 import Standing from './standing';
+import TeamChat from './team-chat';
 
 export default function TeamPage(params) {
   let matches = _.map(params.matches, (mm) => <Match key={mm.id} match={mm} />);
   let standings = _.map(params.standings, (ss) => <Standing key={ss.id} standing={ss} />);
 
   return (
-    <Container>
+    <Container className="page-container">
       <Row className="section-row">
         <Col xs="auto" className="team-page-col">
           <img className="team-page-crest" src={params.crest} />
@@ -30,7 +31,9 @@ export default function TeamPage(params) {
         <Col>
           <Row className="section-row">
             <ListGroup className="section-card">
-              <ListGroupItem className="card-header">Standings</ListGroupItem>
+              <ListGroupItem className="card-header">
+                <font className="header-font">Standings</font>
+              </ListGroupItem>
               <ListGroupItem>
                 <Row>
                   <Col sm="2"><font className="muted-font">Rank</font></Col>
@@ -50,9 +53,11 @@ export default function TeamPage(params) {
           </Row>
           <Row>
             <Card className="section-card">
-              <CardHeader className="card-header">Schedule</CardHeader>
+              <CardHeader className="card-header">
+                <font className="header-font">Schedule</font>
+              </CardHeader>
               <CardBody>
-                <Container>
+                <Container className="schedule-container">
                   { matches }
                 </Container>
               </CardBody>
@@ -60,12 +65,7 @@ export default function TeamPage(params) {
           </Row>
         </Col>
         <Col>
-         <Card className="section-card chat-card">
-           <CardHeader className="card-header">Team Chat</CardHeader>
-           <CardBody>
-             Team Chat
-           </CardBody>
-         </Card>
+          <TeamChat messages={params.messages}/>
         </Col>
       </Row>
     </Container>

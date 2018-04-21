@@ -10,12 +10,12 @@ export default function Feed(params) {
   let yourMatches = _.map(params.yourTeamMatches, (mm) => <Match key={mm.id} match={mm} />);
 
   return (
-    <Container>
+    <Container className="page-container">
       <Row>
         <Col>
           <Row className="section-row">
             <Card className="section-card">
-              <CardHeader>Follow a team</CardHeader>
+              <CardHeader><font className="header-font">Follow a team</font></CardHeader>
               <CardBody>
                 <Container>
                   <FollowForm teams={params.unfollowedTeams} leagues={params.leagues} />
@@ -25,16 +25,18 @@ export default function Feed(params) {
           </Row>
           <Row>
             <ListGroup className="section-card">
-              <ListGroupItem className="card-header">Your Teams</ListGroupItem>
+              <ListGroupItem className="card-header">
+                <font className="header-font">Your Teams</font>
+              </ListGroupItem>
               { yourTeams }
             </ListGroup>
           </Row>
         </Col>
         <Col>
           <Card className="section-card">
-            <CardHeader>Schedule</CardHeader>
+            <CardHeader><font className="header-font">Schedule</font></CardHeader>
             <CardBody>
-              <Container>
+              <Container className="schedule-container">
                 { yourMatches }
               </Container>
             </CardBody>

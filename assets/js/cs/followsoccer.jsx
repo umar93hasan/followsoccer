@@ -96,6 +96,7 @@ export default function followsoccer_init() {
   };
   let standingsList = [standing1, standing2, standing3, standing4, standing5];
 
+  let messages = ["bob: hello", "mary: longer message", "josh: hola", "bob: how's it going? this to test for a longer message. blah blah blah blah blah blah", "mary: what's up guys?", "josh: yo", "bob: my name is bob!", "mary: alsdkfja;sldkfja;lsdkjfasldkfj", "josh: hey"];
 
 class Followsoccer extends React.Component {
   constructor(props) {
@@ -115,7 +116,7 @@ class Followsoccer extends React.Component {
             <Feed unfollowedTeams={teamList} leagues={leagueList} yourTeams={yourTeamList} yourTeamMatches={matchList} />
           } />
           <Route path="/teampage/:team_id" exact={true} render={() =>
-            <TeamPage team={gladBach} league={bund} crest={homeCrestUrl} matches={matchList} standings={standingsList}/>
+            <TeamPage team={gladBach} league={bund} crest={homeCrestUrl} matches={matchList} standings={standingsList} messages={messages} />
           } />
         </div>
       </Router>

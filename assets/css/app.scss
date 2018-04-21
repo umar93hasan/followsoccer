@@ -6,7 +6,7 @@
 }
 
 .card-header {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgb(88, 99, 109);
 }
 
 .section-card {
@@ -21,6 +21,10 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+.header-font {
+  color: white
+}
+
 /*-----your teams-----*/
 
 .your-teams-card-body {
@@ -29,12 +33,16 @@
 
 /*-----schedule-----*/
 
+.schedule-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .match-col {
   text-align: center;
 }
 
 .match-row {
-  margin-bottom: 2ex;
+  margin-top: 2ex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
@@ -68,5 +76,32 @@
 }
 
 .chat-card {
-  height: 100%;
+  max-height: 70ex;
+}
+
+.team-chat-cardbody {
+  overflow-y: scroll;
+}
+
+.chat-input-textarea {
+  height: 4ex;
+}
+
+.chat-input-formgroup {
+  margin: 0;
+}
+
+.chat-message-container {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  padding: 0;
+  margin-bottom: 1ex;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: inline-block;
+  float: left;
+  clear: left;
+}
+
+.chat-message-row {
+  margin: 0.5rem;
 }
