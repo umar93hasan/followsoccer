@@ -73,7 +73,7 @@ class Followsoccer extends React.Component {
     ////console.log(e);
     $.ajax({
       headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-      url: 'http://api.football-data.org/v1/competitions/'+leagueNo+'/teams',
+      url: 'https://api.football-data.org/v1/competitions/'+leagueNo+'/teams',
       method: "get",
       dataType: "json",
       contentType: "application/json; charset=UTF-8",
@@ -95,7 +95,7 @@ class Followsoccer extends React.Component {
       ////console.log("gettingFixtures");
       $.ajax({
         headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-        url: 'http://api.football-data.org/v1/teams/'+localStorage['selTeamCode']+'/fixtures',
+        url: 'https://api.football-data.org/v1/teams/'+localStorage['selTeamCode']+'/fixtures',
         method: "get",
         dataType: "json",
         contentType: "application/json; charset=UTF-8",
@@ -156,7 +156,7 @@ class Followsoccer extends React.Component {
 
     $.ajax({
       headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-      url: 'http://api.football-data.org/v1/teams/'+localStorage['selTeamCode']+'/fixtures',
+      url: 'https://api.football-data.org/v1/teams/'+localStorage['selTeamCode']+'/fixtures',
       method: "get",
       dataType: "json",
       contentType: "application/json; charset=UTF-8",
@@ -169,7 +169,7 @@ class Followsoccer extends React.Component {
 
     $.ajax({
       headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-      url: 'http://api.football-data.org/v1/competitions/'+localStorage['selLeagueCode']+'/leagueTable',
+      url: 'https://api.football-data.org/v1/competitions/'+localStorage['selLeagueCode']+'/leagueTable',
       method: "get",
       dataType: "json",
       contentType: "application/json; charset=UTF-8",
@@ -184,7 +184,7 @@ class Followsoccer extends React.Component {
       let mySchedule = [];
       $.ajax({
         headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-        url: 'http://api.football-data.org/v1/teams/'+teams[i].tcode+'/fixtures',
+        url: 'https://api.football-data.org/v1/teams/'+teams[i].tcode+'/fixtures',
         method: "get",
         dataType: "json",
         contentType: "application/json; charset=UTF-8",

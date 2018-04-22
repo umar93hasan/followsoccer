@@ -20,7 +20,7 @@ export default function FollowForm(params) {
    //console.log(tgt.val());
    $.ajax({
      headers: { 'X-Auth-Token': '1d330847318f42d1811168dde434b3a6'},
-     url: tgt.val(),
+     url: "https:"+tgt.val().substring(5),
      method: "get",
      dataType: "json",
      contentType: "application/json; charset=UTF-8",
